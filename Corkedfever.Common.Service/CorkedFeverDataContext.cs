@@ -17,14 +17,20 @@ namespace Corkedfever.Common.Data
         {
 
         }
-        public DbSet<Messages> Messages { get; set; }
-        public DbSet<Emails> Emails { get; set; }
+        public DbSet<Messages> Message { get; set; }
+        public DbSet<Emails> Email { get; set; }
+        public DbSet<JobType> JobType { get; set; }
+        public DbSet<Skill> Skill { get; set; }
+        public DbSet<Job> Job { get; set; }
         public DbContextAttribute Context { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Messages>().ToTable("Messages");
             modelBuilder.Entity<Emails>().ToTable("Emails");
+            modelBuilder.Entity<JobType>().ToTable("JobTypes");
+            modelBuilder.Entity<Skill>().ToTable("Skills");
+            modelBuilder.Entity<Job>().ToTable("Jobs");
         }
     }
 }
