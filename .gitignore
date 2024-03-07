@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Corkedfever.Common.Service/.vs
+/Corkedfever.Common.Service/bin/Debug/net8.0
+/Corkedfever.Common.Service/obj
